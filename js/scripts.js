@@ -1,4 +1,4 @@
-var game = function game() {
+var game = (function game() {
 
     var canvas = document.getElementById('canvas');
     if (!canvas)
@@ -394,6 +394,4 @@ var game = function game() {
     function clearCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
-};
-
-game();
+})();
