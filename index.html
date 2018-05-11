@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Docks Defender!</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+	<meta name="description" content="Docks Defender!" />
+	<meta name="keywords" content="defend, docks, game, milosz, dura" />
+</head>
+<body>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-50985585-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+	<div id="wrapper" class="noselect">
+		<div id="header"></div>
+		<canvas width="800" height="600" id="canvas"><p>Your browser doesn't support canvas.</p></canvas>
+		<img src="css/images/life.png" alt="life" id="life" class="hidden" />
+		<img src="css/images/scrollSprite.png" alt="scroll" id="scroll" class="hidden" />
+		<span id="options">
+			<h1>Options</h1>
+			<div class="article">
+			<label for="modeSelect">Mode Select:</label>
+			<select name="modeSelect" id="modeSelect">
+				<option value="1">Progressive</option>
+				<option value="0">Endless</option>
+			</select>
+			</div>
+		</span>
+		<span id="rules">
+			<h1>Rules / Tips</h1>
+			<div class="article">
+				<img src="css/images/rulesFig1.jpg" alt="figure 1">
+				<p>Kill <em>enemies</em> to get points and progress to next wave in progressive mode.</p>
+			</div>
+			<div class="article">
+				<img src="css/images/rulesFig2.jpg" alt="figure 2">
+				<p>Kill <em>enemies with hearts next to them</em> to replenish your health. (Max 3)</p>
+			</div>
+		</span>
+	</div>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
