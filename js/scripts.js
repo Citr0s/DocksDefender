@@ -1,83 +1,85 @@
-var canvas = document.getElementById('canvas');
-
 var game = function game() {
-    if (canvas && canvas.getContext) {
-        var ctx = canvas.getContext("2d");
-        if (ctx) {
-            var life = document.getElementById('life');
-            var scroll = document.getElementById('scroll');
-            var options = document.getElementById('options');
 
-            var points = 0;
-            var lives = 4;
-            var start = false;
-            var kills = 0;
+    var canvas = document.getElementById('canvas');
+    if (!canvas)
+        return;
 
-            var fps = 0;
-            var now = new Date;
-            var lastUpdate = (new Date) * 1;
-            var fpsFilter = 30;
+    var ctx = canvas.getContext("2d");
+    if (!ctx)
+        return;
 
-            var explosion = new Image();
-            explosion.src = "css/images/explosion.png";
-            var cx = 0;
-            var cy = 0;
-            var sx = 0;
-            var sy = 0;
-            var sw = 50;
-            var sh = 50;
-            var count = 0;
+    var life = document.getElementById('life');
+    var scroll = document.getElementById('scroll');
+    var options = document.getElementById('options');
 
-            var lastUpdateTime = 0;
-            var acDelta = 0;
-            var msPerFrame = 50;
-            var x = 0;
+    var points = 0;
+    var lives = 4;
+    var start = false;
+    var kills = 0;
 
-            var enemySprite = new Image();
-            enemySprite.src = "css/images/enemySprite.png";
-            var Ecx = 0;
-            var Ecy = 0;
-            var Esx = 0;
-            var Esy = 65;
-            var Esw = 65;
-            var Esh = 65;
-            var Ecount = 0;
+    var fps = 0;
+    var now = new Date;
+    var lastUpdate = (new Date) * 1;
+    var fpsFilter = 30;
 
-            var fireSprite = new Image();
-            fireSprite.src = "css/images/fireSprite.png";
-            var Fcx = 0;
-            var Fcy = 0;
-            var Fsx = 0;
-            var Fsy = 0;
-            var Fsw = 64;
-            var Fsh = 64;
-            var Fcount = 0;
-            var FmsPerFrame = 90;
+    var explosion = new Image();
+    explosion.src = "css/images/explosion.png";
+    var cx = 0;
+    var cy = 0;
+    var sx = 0;
+    var sy = 0;
+    var sw = 50;
+    var sh = 50;
+    var count = 0;
 
-            lastCoordX = 0;
-            lastCoordY = 0;
+    var lastUpdateTime = 0;
+    var acDelta = 0;
+    var msPerFrame = 50;
+    var x = 0;
 
-            var enemyDelay = 10;
-            var direction = 1;
+    var enemySprite = new Image();
+    enemySprite.src = "css/images/enemySprite.png";
+    var Ecx = 0;
+    var Ecy = 0;
+    var Esx = 0;
+    var Esy = 65;
+    var Esw = 65;
+    var Esh = 65;
+    var Ecount = 0;
+
+    var fireSprite = new Image();
+    fireSprite.src = "css/images/fireSprite.png";
+    var Fcx = 0;
+    var Fcy = 0;
+    var Fsx = 0;
+    var Fsy = 0;
+    var Fsw = 64;
+    var Fsh = 64;
+    var Fcount = 0;
+    var FmsPerFrame = 90;
+
+    lastCoordX = 0;
+    lastCoordY = 0;
+
+    var enemyDelay = 10;
+    var direction = 1;
 
 
-            //var enemy = new Enemy({context:ctx});
-            var enemies = [];
-            var level = 1;
-            var hit = false;
+    //var enemy = new Enemy({context:ctx});
+    var enemies = [];
+    var level = 1;
+    var hit = false;
 
-            var enemyCount = level * 5;
-            var endlessMode = false;
-            var executed = false;
+    var enemyCount = level * 5;
+    var endlessMode = false;
+    var executed = false;
 
-            for (var i = 0; i < enemyCount; i++) {
-                enemies[i] = new Enemy({context: ctx});
-            }
-
-            window.addEventListener('load', update);
-            canvas.addEventListener('click', shoot);
-        }
+    for (var i = 0; i < enemyCount; i++) {
+        enemies[i] = new Enemy({context: ctx});
     }
+
+    window.addEventListener('load', update);
+    canvas.addEventListener('click', shoot);
 
     function update(e) {
         if (start) {
