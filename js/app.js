@@ -1,4 +1,4 @@
-var game = (function game() {
+function game() {
 
     var canvas = document.getElementById('canvas');
     if (!canvas)
@@ -23,7 +23,7 @@ var game = (function game() {
     var fpsFilter = 30;
 
     var explosion = new Image();
-    explosion.src = "css/images/explosion.png";
+    explosion.src = "assets/explosion.png";
     var cx = 0;
     var cy = 0;
     var sx = 0;
@@ -38,7 +38,7 @@ var game = (function game() {
     var x = 0;
 
     var enemySprite = new Image();
-    enemySprite.src = "css/images/enemySprite.png";
+    enemySprite.src = "assets/enemySprite.png";
     var Ecx = 0;
     var Ecy = 0;
     var Esx = 0;
@@ -48,7 +48,7 @@ var game = (function game() {
     var Ecount = 0;
 
     var fireSprite = new Image();
-    fireSprite.src = "css/images/fireSprite.png";
+    fireSprite.src = "assets/fireSprite.png";
     var Fcx = 0;
     var Fcy = 0;
     var Fsx = 0;
@@ -75,7 +75,7 @@ var game = (function game() {
     var executed = false;
 
     for (var i = 0; i < enemyCount; i++) {
-        enemies[i] = new Enemy({context: ctx});
+        enemies[i] = new Enemy({ context: ctx });
     }
 
     window.addEventListener('load', update);
@@ -309,7 +309,7 @@ var game = (function game() {
         var lifeRegen = Math.floor((Math.random() * enemyCount));
 
         for (var i = 0; i < enemyCount; i++) {
-            enemies[i] = new Enemy({context: ctx});
+            enemies[i] = new Enemy({ context: ctx });
 
             if (lifeRegen == i) {
                 enemies[i].hasLife = true;
@@ -379,7 +379,7 @@ var game = (function game() {
             enemies.splice(0, enemies.length);
 
             for (var i = 0; i < enemyCount; i++) {
-                enemies[i] = new Enemy({context: ctx});
+                enemies[i] = new Enemy({ context: ctx });
             }
         }
     }
@@ -394,4 +394,6 @@ var game = (function game() {
     function clearCanvas() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
-})();
+};
+
+game();
