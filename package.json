@@ -9,7 +9,10 @@
   },
   "devDependencies": {
     "laravel-mix": "^6.*",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.63.6",
-    "sass-loader": "^12.1.0"
+    "sass-loader": "^12.1.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6"
   }
 }

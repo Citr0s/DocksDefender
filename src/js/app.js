@@ -23,7 +23,7 @@ function game() {
     var fpsFilter = 30;
 
     var explosion = new Image();
-    explosion.src = "assets/explosion.png";
+    explosion.src = "./assets/explosion.png";
     var cx = 0;
     var cy = 0;
     var sx = 0;
@@ -38,7 +38,7 @@ function game() {
     var x = 0;
 
     var enemySprite = new Image();
-    enemySprite.src = "assets/enemySprite.png";
+    enemySprite.src = "./assets/enemySprite.png";
     var Ecx = 0;
     var Ecy = 0;
     var Esx = 0;
@@ -48,7 +48,7 @@ function game() {
     var Ecount = 0;
 
     var fireSprite = new Image();
-    fireSprite.src = "assets/fireSprite.png";
+    fireSprite.src = "./assets/fireSprite.png";
     var Fcx = 0;
     var Fcy = 0;
     var Fsx = 0;

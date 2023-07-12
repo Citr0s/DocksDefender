@@ -1,4 +1,16 @@
 {
     "/dist/js/app.js": "/dist/js/app.js",
-    "/dist/styles/app.css": "/dist/styles/app.css"
+    "/dist/styles/app.css": "/dist/styles/app.css",
+    "/dist/assets/bg.png": "/dist/assets/bg.png",
+    "/dist/assets/crosshair.png": "/dist/assets/crosshair.png",
+    "/dist/assets/enemySprite.png": "/dist/assets/enemySprite.png",
+    "/dist/assets/explosion.png": "/dist/assets/explosion.png",
+    "/dist/assets/favicon.ico": "/dist/assets/favicon.ico",
+    "/dist/assets/fireSprite.png": "/dist/assets/fireSprite.png",
+    "/dist/assets/header.png": "/dist/assets/header.png",
+    "/dist/assets/life.png": "/dist/assets/life.png",
+    "/dist/assets/rulesFig1.jpg": "/dist/assets/rulesFig1.jpg",
+    "/dist/assets/rulesFig2.jpg": "/dist/assets/rulesFig2.jpg",
+    "/dist/assets/scrollSprite.png": "/dist/assets/scrollSprite.png",
+    "/dist/index.html": "/dist/index.html"
 }

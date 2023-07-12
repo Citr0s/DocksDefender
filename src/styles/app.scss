@@ -24,12 +24,12 @@ h1 {
 
 #wrapper #header {
     height: 200px;
-    background-image: url(../../assets/header.png);
+    background-image: url(./../assets/header.png);
 }
 
 #wrapper canvas {
-    cursor: url(../../assets/crosshair.png) 25 25, crosshair;
-    background: url(../../assets/bg.png);
+    cursor: url(./../assets/crosshair.png) 25 25, crosshair;
+    background: url(./../assets/bg.png);
 }
 
 .hidden {
